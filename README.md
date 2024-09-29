@@ -44,7 +44,7 @@ This project is a launcher for the game **Blade & Soul**, designed for connectin
 
 ### Note on File Size Optimization
 
-To reduce the size of the launcher files and improve loading times, it is recommended to compress JavaScript, CSS, HTML, and all image files before building the launcher. This process not only minimizes the file size but also enhances the overall performance of the launcher by speeding up resource loading. Utilizing tools like UglifyJS for JavaScript, CSSNano for CSS, and image optimization tools can help achieve significant reductions in file sizes without compromising quality.
+*To reduce the size of the launcher files and improve loading times, it is recommended to compress JavaScript, CSS, HTML, and all image files before building the launcher. This process not only minimizes the file size but also enhances the overall performance of the launcher by speeding up resource loading. Utilizing tools like UglifyJS for JavaScript, CSSNano for CSS, and image optimization tools can help achieve significant reductions in file sizes without compromising quality.*
 
 4. After building, the project release will be located in the folder:
 
