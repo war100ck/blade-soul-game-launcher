@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blade & Soul Game Launcher</title>
+  <!-- Подключение Bootstrap, Font Awesome и пользовательских стилей -->
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Верхняя полоса -->
+  <div class="top-bar">
+    <!-- Область для перетаскивания окна -->
+    <div class="drag-area">
+        <div class="social-icons">
+            <a href="https://forum.ragezone.com/community/blade-and-soul.1019/" target="_blank" class="social-icon ragezone-icon">
+                <img src="../assets/images/ragezone.png" alt="RageZone" class="social-icon-img">
+            </a>
+            <a id="bns-link" href="" target="_blank" class="social-icon bns-icon">
+                <img src="../assets/images/logo.png" alt="Blade & Soul Private Server" class="social-icon-img">
+            </a>
+        </div>
+
+        <!-- Группа иконок настройки и регистрации -->
+        <div class="control-icons">
+            <div class="control-icon" id="registrationButton"><i class="fas fa-user-plus"></i></div>         
+            <div class="control-icon" id="settingsButton"><i class="fas fa-cog"></i></div>
+        </div>
+
+        <!-- Группа иконок сворачивания и закрытия окна -->
+        <div class="window-control-icons">
+            <div class="window-control-icon" id="minimizeButton"><i class="fas fa-minus"></i></div>
+            <div class="window-control-icon" id="closeButton"><i class="fas fa-times"></i></div>
+        </div>
+    </div>
+</div>
+
+  <!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+     <div class="carousel-item active">
+        <img class="d-block w-100" src="../assets/images/slide/index.jpg" alt="First slide">
+     </div>
+     <div class="carousel-item">
+        <img class="d-block w-100" src="../assets/images/slide/index_2.jpg" alt="Second slide">
+     </div>
+     <div class="carousel-item">
+        <img class="d-block w-100" src="../assets/images/slide/index_3.jpg" alt="Third slide">
+     </div>
+     <div class="carousel-item">
+        <img class="d-block w-100" src="../assets/images/slide/index_4.jpg" alt="Fourth slide">
+     </div>
+  </div>
+</div>
+
+
+  <!-- Основное содержимое с фоновым изображением -->
+  <div class="content">
+    <div class="text-image-container">
+      <img id="mainTextImage" src="../assets/images/text-orange.png" alt="Text Image" class="main-text-image">
+    </div>
+
+    <a href="#" id="playButton" class="sliding-button">Play</a>
+  </div>
+
+  <!-- Полоса загрузки -->
+  <div id="loadingBar" class="progress loading-bar">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%;"></div>
+  </div>
+
+  <!-- Выезжающая боковая панель для регистрации и входа -->
+<div id="registerPage" class="side-page" style="display: none;">
+  <div class="side-page-header">
+    <i class="fas fa-user-plus side-page-back-icon"></i>
+    <span class="side-page-back-text" id="toggleSignInSignUp" style="cursor: pointer;">SignIn/SignUp</span>
+    <i id="closeRegisterPage" class="fa-solid fa-circle-arrow-right close-panel" title="Закрыть"></i>
+  </div>
+  
+  <div class="side-page-content">
+    <!-- Поля ввода для регистрации -->
+    <div id="registrationForm">
+      <div class="form-group mb-3">
+        <label for="accountName">Account Name</label>
+        <input type="text" id="accountName" class="form-control" placeholder="Enter your account name">
+      </div>
+      <div class="form-group mb-3">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="form-group mb-3">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter your password">
+      </div>
+
+      <!-- Кнопка регистрации -->
+      <button id="registrationButtonSubmit" class="btn btn-primary w-100">Registration</button>
+      <div class="button-container">
+        <button id="showLoginForm" class="custom-button">
+            Already have an account? <span class="highlight">Login</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Поля ввода для входа -->
+    <div id="loginForm" style="display: none;">
+      <div class="form-group mb-3">
+        <label for="loginEmail">Email</label>
+        <input type="text" id="loginEmail" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="form-group mb-3">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password">
+      </div>
+
+      <!-- Кнопка входа -->
+      <button id="loginButtonSubmit" class="btn btn-primary w-100">Login</button>
+      <div class="button-container"></div>
+      <button id="showRegistrationForm" class="custom-button">
+        Don't have an account? <span class="highlight">Register</span>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <!-- Панель настроек -->
+  <div id="settingsPage" class="side-page">
+    <div class="side-page-header">
+      <i class="fas fa-cog side-page-back-icon"></i>
+      <span class="side-page-back-text">Settings</span>
+      <i id="closeSettingsPage" class="fa-solid fa-circle-arrow-right close-panel" title="Закрыть"></i>
+    </div>
+    <div class="side-page-content">
+      <div class="form-group">
+        <label for="serverIp">Enter server address to check:</label>
+        <input type="text" id="serverIp" class="form-control" value="127.0.0.1">
+      </div>
+      <button id="checkIpButton" class="btn btn-primary mt-3 w-100">Check Connection</button>
+      <div class="architecture-selection mt-4">
+        <h5>Launch with x32 or x64</h5>
+        <div class="form-check">
+          <input type="checkbox" id="architecture32" class="form-check-input">
+          <label for="architecture32" class="form-check-label">x32</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="architecture64" class="form-check-input">
+          <label for="architecture64" class="form-check-label">x64</label>
+        </div>
+      </div>
+      <button id="saveConfigButton" class="btn btn-success mt-3 w-100">Save Configuration</button>
+    </div>
+  </div>
+
+  <!-- Пример элемента для отображения версии клиента -->
+  <div id="client-version" class="client-version position-absolute bottom-0 start-0 mb-4 ms-4 text-white">
+    Loading version...
+  </div>
+
+  <!-- Подключение скриптов -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

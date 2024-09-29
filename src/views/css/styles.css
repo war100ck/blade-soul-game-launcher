@@ -1,0 +1,499 @@
+ /* Запрет выделения текста для всего документа */
+ html, body {
+  height: 100%; /* Устанавливаем высоту для body */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Убираем прокрутку */
+  font-family: Arial, sans-serif;
+  user-select: none; /* Запрещает выделение текста */
+  -webkit-user-select: none; /* Запрещает выделение текста в WebKit-браузерах */
+  -moz-user-select: none; /* Запрещает выделение текста в Firefox */
+  -ms-user-select: none; /* Запрещает выделение текста в старых версиях Internet Explorer */
+}
+
+.carousel-item {
+  height: 100vh; /* Устанавливаем высоту слайдера на всю высоту окна */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Изображение заполняет весь слайд */
+  height: 100%; /* Высота изображения */
+  width: 100%; /* Ширина изображения */
+}
+/* Пользовательские стили для Toastr */
+.toast-top-left.custom-toast-position {
+  margin-top: 22px; /* Отступ сверху для перемещения уведомлений ниже шапки */
+  border-radius: 0; /* Прямые углы */
+}
+
+/* Убедитесь, что контейнер Toastr также имеет достаточный z-index */
+#toast-container {
+  z-index: 9999; /* Высокий z-index для Toastr */
+  position: absolute; /* Убедитесь, что контейнер имеет абсолютное позиционирование */
+  top: 5px; /* Устанавливаем верхнее положение контейнера */
+  left: 5; /* Или другое значение, в зависимости от желаемой позиции */
+}
+
+/* Верхняя полоса */
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Высота полосы */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 1000;
+  -webkit-app-region: drag; /* Разрешить перетаскивание окна */
+  border-radius: 0; /* Прямые углы */
+  cursor: default; /* Запрет на разворачивание окна по двойному клику */
+}
+
+/* Группа иконок соц. сетей */
+.social-icons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 40px; /* Позиционирование группы слева */
+  z-index: 1001; /* Увеличиваем z-index, чтобы иконки были поверх других элементов */
+}
+
+/* Стили для иконок соц. сетей */
+.social-icons {
+  display: flex; /* Используем flexbox для выравнивания элементов в одну линию */
+  align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+.social-icon {
+  margin: 0 10px; /* Отступы между иконками */
+  cursor: pointer;
+  -webkit-app-region: no-drag; /* Запретить перетаскивание на кнопках */
+  transition: opacity 0.3s ease;
+}
+
+/* Стили для изображения иконок */
+.social-icon-img {
+  vertical-align: middle; /* Выравнивание по середине строки */
+}
+
+/* Специфические размеры для разных иконок */
+.ragezone-icon .social-icon-img {
+  width: 50px;  /* Ширина изображения для иконки RageZone */
+  height: 50px; /* Высота изображения для иконки RageZone */
+}
+
+.bns-icon .social-icon-img {
+  width: 80px;  /* Ширина изображения для иконки Blade & Soul */
+  height: 80px; /* Высота изображения для иконки Blade & Soul */
+}
+
+/* Эффект затемнения иконок соц. сетей при наведении */
+.social-icon:hover .social-icon-img {
+  opacity: 0.7; /* Эффект затемнения изображения при наведении */
+}
+
+
+/* Группа иконок настроек и регистрации */
+.control-icons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  right: 40px; /* Позиционирование группы справа от соц. иконок */
+  z-index: 1001; /* Увеличиваем z-index, чтобы иконки были поверх других элементов */
+}
+
+/* Стили для иконок управления */
+.control-icon {
+  margin: 0 10px; /* Отступы между иконками */
+  cursor: pointer;
+  -webkit-app-region: no-drag; /* Запретить перетаскивание на кнопках */
+  font-size: 24px; /* Размер иконок управления */
+  color: #fff; /* Цвет иконок управления */
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения иконок управления при наведении */
+.control-icon:hover {
+  opacity: 0.7; /* Эффект затемнения иконок управления при наведении */
+}
+
+/* Группа иконок сворачивания и закрытия окна */
+.window-control-icons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 10px; /* Позиционирование группы справа от панели настроек и регистрации */
+  z-index: 1001; /* Увеличиваем z-index, чтобы иконки были поверх других элементов */
+}
+
+/* Стили для иконок сворачивания и закрытия */
+.window-control-icon {
+  margin: 0 5px; /* Отступы между иконками */
+  cursor: pointer;
+  -webkit-app-region: no-drag; /* Запретить перетаскивание на кнопках */
+  font-size: 24px; /* Размер иконок сворачивания и закрытия */
+  color: #fff; /* Цвет иконок сворачивания и закрытия */
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения иконок сворачивания и закрытия при наведении */
+.window-control-icon:hover {
+  opacity: 0.7; /* Эффект затемнения иконок сворачивания и закрытия при наведении */
+}
+
+/* Новый контейнер для изображения blade&soul */
+.text-image-container {
+  position: absolute;
+  top: 70%;
+  left: 20px; /* Позиционирование контейнера с изображением слева */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px; /* Высота контейнера */
+  width: auto; /* Ширина контейнера */
+}
+
+/* Изображение текста */
+.main-text-image {
+  height: 100%; /* Установка высоты изображения в пределах контейнера */
+  width: auto; /* Пропорциональное изменение ширины */
+  transition: opacity 0.5s ease;
+}
+
+/* Стили для кнопки "Play" */
+.sliding-button {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #FFA500, #FF8C00, #FF7F50, #FF6347);
+  border-image-slice: 1;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+  bottom: 30px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Псевдо-элемент для градиента */
+.sliding-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(180deg, #FFA500, #FF8C00, #FF7F50, #FF6347);
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+
+/* Эффект свечения вокруг кнопки "Играть" */
+.glow-effect {
+  box-shadow: 0 0 10px 5px rgba(255, 140, 0, 0.8);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+/* Эффект заполнения градиентом по завершению загрузки */
+.loading-complete:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+
+/* Эффект наведения на кнопку */
+.sliding-button:hover {
+  transform: scale(1.03); /* Легкое увеличение на 3% при наведении */
+  box-shadow: 0 0 10px 5px rgba(255, 140, 0, 0.7); /* Уменьшенное свечение */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Эффект заполнения градиентом при наведении */
+.sliding-button:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+
+/* Эффект нажатия на кнопку */
+.sliding-button:active {
+  box-shadow: 0 0 15px 10px rgba(255, 140, 0, 0.8); /* Расширенное свечение */
+  transform: scale(0.95); /* Легкое уменьшение размера при нажатии */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавный переход */
+}
+
+/* Альтернативный эффект нажатия с градиентом */
+.sliding-button:active:before {
+  background: linear-gradient(180deg, #FFA500, #FF8C00, #FF7F50, #FF6347) !important; /* Яркий градиент при нажатии */
+  height: 100%; /* Заполнение псевдо-элемента */
+}
+
+/* Полоса загрузки */
+.loading-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #f1773060 !important;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-bar.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-bar .progress-bar {
+  height: 100%;
+  background-color: #ff8c00; /* Оранжевый цвет */
+  width: 0;
+  animation: loadingAnimation 3s linear forwards;
+}
+
+@keyframes loadingAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Выезжающие боковые панели */
+.side-page {
+  position: fixed;
+  top: 100px; /* Устанавливаем верхнюю границу панели на уровне нижнего края верхней панели */
+  bottom: 0; /* Панель тянется до низа окна */
+  right: 0; /* Панель выдвигается от правого края окна */
+  width: 300px; /* Ширина панели */
+  background: rgba(0, 0, 0, 0.9); /* Темный фон панели */
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5); /* Тень для панели */
+  transform: translateX(100%); /* Начальное состояние панели, скрытое за правым краем */
+  transition: transform 0.3s ease; /* Плавный переход при открытии и закрытии панели */
+  backdrop-filter: blur(5px); /* Эффект блюра фона */
+  z-index: 1002; /* Поверхность над остальными элементами */
+}
+
+/* Показываем панель при активации */
+.side-page.open {
+  transform: translateX(0); /* Панель переходит в видимую область */
+}
+
+/* Кнопка закрытия панели */
+.close-panel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px; /* Размер иконки закрытия */
+  color: #fff; /* Цвет иконки закрытия */
+}
+
+/* Шапка панели */
+.side-page-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Разделительная линия */
+  background: rgba(0, 0, 0, 0.8); /* Фон шапки панели */
+}
+
+/* Иконка "back" и текст */
+.side-page-header .side-page-back-icon {
+  font-size: 20px; /* Размер иконки */
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+  color: #fff; /* Цвет иконки */
+}
+
+.side-page-header .side-page-back-text {
+  font-size: 16px; /* Размер текста */
+  color: #fff; /* Цвет текста */
+}
+
+/* Общие стили для панели настроек */
+.side-page-content {
+  padding: 20px;
+  overflow-y: auto;
+  color: #fff;
+}
+
+/* Поле для ввода IP */
+.form-group {
+  margin-bottom: 1px; /* Уменьшили отступ снизу для поля ввода */
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group .form-control {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+}
+
+/* Кнопка проверки соединения */
+.btn-primary {
+  background-color: #ff8800;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 0px;
+}
+
+.btn-primary:hover {
+  background-color: #fc6a27;
+}
+
+/* Кнопка "Check Connection" занимает 100% ширины контейнера */
+.btn-primary.w-100 {
+  width: 100%;
+}
+
+/* Блок выбора архитектуры */
+.architecture-selection h5 {
+  font-size: 18px;
+  font-weight: bold; /* Жирный текст */
+  margin-bottom: 10px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.form-check-label {
+  font-size: 16px;
+}
+
+/* Шапка панели настроек */
+.side-page-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Разделительная линия */
+  background: rgba(0, 0, 0, 0.8); /* Фон шапки панели */
+}
+
+.side-page-header .side-page-back-icon {
+  font-size: 20px; /* Размер иконки */
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+  color: #fff; /* Цвет иконки */
+}
+
+.side-page-header .side-page-back-text {
+  font-size: 16px; /* Размер текста */
+  font-weight: bold; /* Жирный текст */
+  color: #fff; /* Цвет текста */
+}
+
+/* Кнопка закрытия панели */
+.close-panel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px; /* Размер иконки закрытия */
+  color: #fff; /* Цвет иконки закрытия */
+}
+
+/* Версия клиента */
+.client-version {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.client-version label {
+  margin-right: 10px;
+}
+
+/* Стиль для блока с ником */
+#registrationButton.nickname {
+  font-family: 'Arial', sans-serif;
+  background-color: transparent; /* Убираем фон */
+  border: none; /* Убираем рамки */
+  cursor: default; /* Убираем "руку" при наведении */
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Стиль для текста "Welcome" */
+#registrationButton .welcome-text {
+  font-size: 16px; /* Размер текста "Welcome" */
+  color: #cccccc; /* Цвет текста "Welcome" */
+  margin-right: 5px; /* Отступ между "Welcome" и ником */
+}
+
+/* Стиль для текста с ником */
+#registrationButton .nickname-text {
+  font-size: 16px; /* Размер текста никнейма */
+  font-weight: bold;
+  color: #ffffff; /* Белый цвет для никнейма */
+}
+
+/* Опционально: hover-эффект */
+#registrationButton.nickname:hover .nickname-text {
+  color: #ffcc00; /* Эффект при наведении на ник */
+}
+
+.button-container {
+  text-align: center; /* Центрируем текст в контейнере */
+  margin-top: 10px; /* Устанавливаем отступ сверху для поднятия текста */
+}
+
+.custom-button {
+  background: none; /* Убираем фоновый цвет */
+  border: none; /* Убираем рамку */
+  color: #ffffff; /* Цвет текста оранжевый */
+  font-family: 'Montserrat', sans-serif; /* Шрифт */
+  font-size: 16px; /* Размер шрифта */
+  text-align: center; /* Центрируем текст в кнопке */
+  padding: 15px 0; /* Увеличиваем внутренние отступы для опускания текста */
+  cursor: pointer; /* Указываем, что это кнопка */
+  transition: color 0.3s; /* Плавный переход для цвета */
+}
+
+/* Выделение текста "Login" и "Register" */
+.highlight {
+  font-weight: bold; /* Жирный шрифт */
+  color: #f16532; /* Цвет выделенного текста */
+}
+
+/* Эффект наведения без увеличения */
+.custom-button:hover {
+  color: #f09165; /* Темнее оранжевый цвет при наведении */
+}
+
+/* Эффект нажатия без увеличения */
+.custom-button:active {
+  transform: scale(1); /* Убираем уменьшение при нажатии */
+  color: #FF6347; /* Еще темнее оранжевый цвет при нажатии */
+}
+
+

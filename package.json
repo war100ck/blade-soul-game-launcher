@@ -1,0 +1,46 @@
+{
+  "name": "game-launcher",
+  "version": "1.0.0",
+  "description": "A launcher for BNS game with customizable settings and IP address management.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "WAR100CK",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.3.0",
+    "jquery": "^3.7.1",
+    "ping": "^0.4.4",
+    "toastr": "^2.1.4"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5"
+  },
+  "build": {
+    "appId": "github.com/war100ck/blade-soul-game-launcher",
+    "productName": "BNS_Launcer",
+    "files": [
+      "main.js",
+      "src/views/index.html",
+      "src/assets/**/*",
+      "src/views/css/**/*",
+      "src/views/js/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "icon": "src/assets/images/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
