@@ -200,6 +200,8 @@ This project uses the following Node.js modules:
 - **crypto**: Node.js built-in module for cryptographic functions.
 - **toastr**: Library for displaying non-blocking notifications.
 
+*Note: The game server for this launcher can be downloaded from https://github.com/war100ck/Server-Api-BnS-Server.*
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
