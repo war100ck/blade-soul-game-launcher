@@ -17,10 +17,6 @@
 
 </details>
 
-### Latest Release
-
-You can find the latest version of the Blade & Soul Game Launcher at the [releases page](https://github.com/war100ck/blade-soul-game-launcher/releases). This page includes all available versions.
-
 This project is a launcher for the game **Blade & Soul**, designed for connecting to a private game server. The launcher provides users with an intuitive interface for registration, login, and server connection settings.
 
 ## Key Features
@@ -218,6 +214,10 @@ This project uses the following Node.js modules:
 - **path**: Node.js built-in module for handling file and directory paths.
 - **crypto**: Node.js built-in module for cryptographic functions.
 - **toastr**: Library for displaying non-blocking notifications.
+
+### Latest Release
+
+You can find the latest version of the Blade & Soul Game Launcher at the [releases page](https://github.com/war100ck/blade-soul-game-launcher/releases). This page includes all available versions.
 
 *Note: The game server for this launcher can be downloaded from https://github.com/war100ck/Server-Api-BnS-Server.*
 
