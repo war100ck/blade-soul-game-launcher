@@ -1,6 +1,19 @@
 # Blade & Soul Game Launcher
 
-![Blade & Soul Game Launcher](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen//launcher.png)
+![Blade & Soul Game Launcher](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/launcher.png)
+
+<details>
+<summary>Click to see more screenshots</summary>
+
+![1.](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/1.png)
+
+![2.](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/2.png)
+
+![3.](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/3.png)
+
+</details>
+
+
 
 This project is a launcher for the game **Blade & Soul**, designed for connecting to a private game server. The launcher provides users with an intuitive interface for registration, login, and server connection settings.
 
