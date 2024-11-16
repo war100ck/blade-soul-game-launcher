@@ -4,7 +4,31 @@
 
 # Blade & Soul Game Launcher
 
+## Table of Contents
+
+- [Screenshots](#screenshots)
+- [Key Features](#key-features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [For Developers](#for-developers-if-you-want-to-build-the-launcher-manually)
+  - [Skip the Build Step](#-skip-the-build-step)
+- [Usage](#usage)
+  - [Initial Setup Instructions](#initial-setup-instructions)
+  - [Configuration](#configuration)
+  - [Registration and Login](#registration-and-login)
+  - [Starting the Game](#starting-the-game)
+  - [Social Media](#social-media)
+- [File Structure](#file-structure)
+- [Encryption](#encryption)
+- [Notifications](#notifications)
+- [Dependencies](#dependencies)
+- [Latest Release](#latest-release)
+- [License](#license)
+
+
 ![Blade & Soul Game Launcher](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/launcher.png)
+
+## Screenshots
 
 <details>
 <summary>Click to see more screenshots</summary>
@@ -38,6 +62,8 @@ This project is a launcher for the game **Blade & Soul**, designed for connectin
 
 ## Installation
 
+### For Developers (If you want to build the launcher manually):
+
 1. Clone the repository:
 
     ```bash
@@ -57,6 +83,14 @@ This project is a launcher for the game **Blade & Soul**, designed for connectin
     npm run build
     ```
 
+---
+
+### 🎉 Skip the Build Step!
+
+If you prefer not to build the launcher manually, you can download the pre-built version from the [Releases section](https://github.com/war100ck/blade-soul-game-launcher/releases) and proceed to [step 6](#file-transfer) in the installation instructions to complete the setup and start using the launcher.
+
+---    
+
 ### Note on File Size Optimization
 
 *To reduce the size of the launcher files and improve loading times, it is recommended to compress JavaScript, CSS, HTML, and all image files before building the launcher. This process not only minimizes the file size but also enhances the overall performance of the launcher by speeding up resource loading. Utilizing tools like UglifyJS for JavaScript, CSSNano for CSS, and image optimization tools can help achieve significant reductions in file sizes without compromising quality.*
@@ -69,6 +103,7 @@ This project is a launcher for the game **Blade & Soul**, designed for connectin
 
 5. In this folder, you will find the executable file **BNS_Launcher.exe**.
 
+<a name="file-transfer"></a>
 6. **File Transfer**: Copy the following files to the Blade & Soul game folder:
 
 ```
