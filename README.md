@@ -4,6 +4,8 @@
 
 # Blade & Soul Game Launcher
 
+![Blade & Soul Game Launcher](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/launcher.png)
+
 ## Table of Contents
 
 - [Screenshots](#screenshots)
@@ -24,9 +26,6 @@
 - [Dependencies](#dependencies)
 - [Latest Release](#latest-release)
 - [License](#license)
-
-
-![Blade & Soul Game Launcher](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/launcher.png)
 
 ## Screenshots
 
