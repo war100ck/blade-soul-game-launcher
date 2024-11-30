@@ -253,7 +253,7 @@ This project uses the following Node.js modules:
 
 You can find the latest version of the Blade & Soul Game Launcher at the [releases page](https://github.com/war100ck/blade-soul-game-launcher/releases). This page includes all available versions.
 
-*Note: The game server for this launcher can be downloaded from https://github.com/war100ck/BnS-Api-Server.*
+*Note: The game server for this launcher can be downloaded from https://github.com/war100ck/BnS-Api-Server - 2020 or https://github.com/war100ck/Server-Api-BnS-2017 - 2017.*
 
 ## License
 
