@@ -266,3 +266,12 @@ You can find the latest version of the Blade & Soul Game Launcher at the [releas
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Discussion on Blade & Soul Game API Server + Game Launcher
+
+For further information and discussions related to the **Blade & Soul Game API Server** and **Game Launcher**, visit the active discussion on the forum:
+
+[Discussion on RageZone](https://forum.ragezone.com/threads/blade-soul-game-api-server-game-launcher.1234817/)
+
+Here you will find project details, exchange of experiences, and solutions to various technical issues related to the setup and launch of the Blade & Soul API server.
+
