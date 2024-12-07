@@ -10,7 +10,7 @@ This project is a launcher for the game **Blade & Soul**, designed for connectin
 
 ## ⚠️ Important Note
 
-This launcher is **designed to work only with specific game servers**, which can be downloaded from the following links:
+This launcher is **designed to work only with specific API servers**, which can be downloaded from the following links:
 
 - [BnS-Api-Server (2020)](https://github.com/war100ck/BnS-Api-Server)  
 - [Server-Api-BnS (2017)](https://github.com/war100ck/Server-Api-BnS-2017)
