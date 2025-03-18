@@ -22,7 +22,7 @@
   },
   "build": {
     "appId": "github.com/war100ck/blade-soul-game-launcher",
-    "productName": "BNS_Launcer",
+    "productName": "BNS_Launcher",
     "files": [
       "main.js",
       "src/views/index.html",
