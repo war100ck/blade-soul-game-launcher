@@ -278,11 +278,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Discussion on Blade & Soul Game API Server + Game Launcher
 
-For further information and discussions related to the **Blade & Soul Game API Server** and **Game Launcher**, visit the active discussion on the forum:
+> Prohibition of RAGEZONE Distribution. Distribution, publication, or sharing
+> of download links to this Software (or its substantial portions) on the
+> RAGEZONE forum or any related platforms is strictly prohibited.
 
-[Discussion on RageZone](https://forum.ragezone.com/threads/blade-soul-game-api-server-game-launcher.1234817/)
-
-Here you will find project details, exchange of experiences, and solutions to various technical issues related to the setup and launch of the Blade & Soul API server.
 
 ## Additions / Fixes
 <details>
