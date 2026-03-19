@@ -5,6 +5,10 @@
 
 # Blade & Soul Game Launcher
 
+> Prohibition of RAGEZONE Distribution. Distribution, publication, or sharing
+> of download links to this Software (or its substantial portions) on the
+> RAGEZONE forum or any related platforms is strictly prohibited.
+
 ![Blade & Soul Game Launcher](https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/launcher.png)
 <p align="center">
 <img src="https://raw.githubusercontent.com/war100ck/blade-soul-game-launcher/main/screen/launch.gif" alt="Start Launcer" width="1000px">
@@ -276,13 +280,7 @@ You can find the latest version of the Blade & Soul Game Launcher at the [releas
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Discussion on Blade & Soul Game API Server + Game Launcher
-
-> Prohibition of RAGEZONE Distribution. Distribution, publication, or sharing
-> of download links to this Software (or its substantial portions) on the
-> RAGEZONE forum or any related platforms is strictly prohibited.
-
-
+---
 ## Additions / Fixes
 <details>
   <summary><b>Change Log: 06/08/2025</b></summary>
